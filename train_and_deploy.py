@@ -23,6 +23,7 @@ def make_model():
 
 def deploy_model(model, model_name, baseten_token):
     baseten.login(baseten_token)
+
     baseten.deploy(model, model_name)
 
 
