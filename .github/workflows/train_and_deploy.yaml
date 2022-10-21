@@ -17,6 +17,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: Lint with flake8
+      - name: Train and Push model to Baseten
         run: |
           python train_and_deploy.py model_from_gh_actions ${{ secrets.BASETEN_TOKEN }}
